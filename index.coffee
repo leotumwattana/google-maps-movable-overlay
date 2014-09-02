@@ -16,7 +16,9 @@ drawControl = (map, bounds) ->
     editable: true
 
 drawGroundOverlay = (map, url, bounds) ->
-  overlay = new google.maps.GroundOverlay(url, bounds)
+  options =
+    opacity: 0.7
+  overlay = new google.maps.GroundOverlay(url, bounds, options)
   overlay.setMap(map)
   overlay
 
